@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+
+
+}
+
+<aside float="right"; > <p> This space is for now</p> </aside>
+
+
+@model List<LibrarySystem.Models.Book>
+
+<body>
+    <p>ok lets get started</p>
+</body>
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>
+            <table class="custom-table" style="width:100%">
+                <tr>
+                    <th class="expand">Title</th>
+                    <th class="expand" style="border:1px solid black;">Author</th>
+                    <th class="expand">Genre</th>
+                    <th class="expand">SSBN</th>
+                    <th class="expand">Publisher</th>
+                    <th class="expand">Published</th>
+
+
+                </tr>
+                @foreach (var book in Model)
+                {
+                    <tr>
+                        <td class="auto">@book.Title</td>
+                        <td class="auto">@book.Author</td>
+                        <td class="auto">@book.Genre</td>
+                        <td class="auto">@book.SSBN</td>
+                        <td class="auto">@book.Publisher</td>
+                        <td class="auto">@book.Published</td>
+
+
+                    </tr>
+                }
+
+
+            </table>
+        </p>
+
+        <a href="/home/AddBook"><b>Add Book</b></a>
+
+    </div>
+
